@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Ingrit França — estudante de Sistemas de Informação, desenvolvimento de software e tecnologia.">
+  <meta name="theme-color" content="#100b1c">
+  <title>Ingrit França | Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="ceu" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Início"><span id="marca">IF</span><span>.</span></a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#formacao">Formação</a>
+      <a href="#certificados" id="navCert" hidden>Certificados</a>
+      <a class="nav-contact" href="#contato">Contato <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> <span id="etiqueta">PORTFÓLIO • 2026</span></p>
+        <h1><span id="saudacao">Olá, eu sou</span><br><span class="gradient-text" id="nome">Ingrit França.</span></h1>
+        <p class="hero-role" id="cargo"></p>
+        <p class="hero-description" id="descricao"></p>
+        <p class="hero-lema" id="lema"></p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projetos">Explorar projetos <span>↘</span></a>
+          <a class="button button-ghost" href="#contato">Vamos conversar</a>
+        </div>
+        <div class="hero-meta" id="meta"></div>
+        <div class="erro" id="erro" hidden></div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <button class="moon" id="lua" type="button" aria-label="Clique para chamar estrelas cadentes" title="Clique na lua">☾</button>
+        <div class="spark spark-a">✦</div><div class="spark spark-b">✧</div><div class="spark spark-c">✳</div>
+        <div class="flower flower-a">✿</div><div class="flower flower-b">❀</div>
+        <div class="art-label" id="arteRotulo"></div>
+        <div class="art-index">MOVA O CURSOR · CLIQUE NA LUA</div>
+      </div>
+      <a class="scroll-cue" href="#sobre">SCROLL PARA EXPLORAR <span>↓</span></a>
+    </section>
+
+    <section class="about section-wrap section" id="sobre">
+      <div class="section-heading"><p class="eyebrow num">QUEM SOU</p><h2>Um pouco de <em>mim.</em></h2></div>
+      <div class="about-grid">
+        <div class="about-mark"><span>✳</span><p id="marcaTexto"></p></div>
+        <div class="about-text">
+          <p class="lead" id="destaque"></p>
+          <div class="abas" id="abas" role="tablist" aria-label="Sobre mim"></div>
+          <div id="abaTexto" role="tabpanel" aria-live="polite"></div>
+          <div class="about-facts" id="fatos"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section-wrap section" id="projetos">
+      <div class="section-heading heading-row">
+        <div><p class="eyebrow num">O QUE ESTOU CONSTRUINDO</p><h2>Projetos em <em>destaque.</em></h2></div>
+        <p class="section-note">Cada estrela é um projeto.<br>Clique, ou filtre por tema.</p>
+      </div>
+      <div class="filtros" id="filtros" role="group" aria-label="Filtrar projetos"></div>
+      <div class="mapa-grid">
+        <div class="mapa-box"><svg id="mapa" viewBox="0 0 800 470" role="group" aria-label="Mapa estelar de projetos"></svg></div>
+        <div id="painel" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="skills section-wrap section" id="habilidades">
+      <div class="section-heading"><p class="eyebrow num">FERRAMENTAS &amp; APRENDIZADO</p><h2>Tecnologias que <em>exploro.</em></h2></div>
+      <div class="skills-layout">
+        <p class="skills-intro">Minha caixa de ferramentas está sempre em construção. Estas são algumas das tecnologias e áreas com que venho estudando e praticando.</p>
+        <div class="skill-groups" id="grupos"></div>
+      </div>
+    </section>
+
+    <section class="education section-wrap section" id="formacao">
+      <div class="section-heading"><p class="eyebrow num">MINHA JORNADA</p><h2>Formação &amp; <em>experiências.</em></h2></div>
+      <div class="timeline" id="linha"></div>
+      <div class="experience-note" id="experiencia"></div>
+    </section>
+
+    <section class="certificates section-wrap section" id="certificados" hidden>
+      <div class="section-heading"><p class="eyebrow num">CURSOS E CERTIFICAÇÕES</p><h2>Aprendizado <em>reconhecido.</em></h2></div>
+      <div class="filtros" id="filtrosCert" role="group" aria-label="Filtrar certificados"></div>
+      <div class="certs" id="certs"></div>
+    </section>
+
+    <section class="contact section-wrap section" id="contato">
+      <div class="contact-panel">
+        <div>
+          <p class="eyebrow num">PRÓXIMO CAPÍTULO</p>
+          <h2>Vamos criar algo <em>legal?</em></h2>
+          <p>Estou aberta a oportunidades de aprendizado, colaboração e novos desafios em tecnologia.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary" id="btnGithub" href="#" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+          <a class="button button-ghost" id="btnLinkedin" href="#" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+          <a class="button button-ghost" id="btnEmail" href="#" hidden>E-mail <span>↗</span></a>
+        </div>
+        <span class="contact-decoration">✿</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-wrap">
+    <a class="brand" href="#inicio"><span id="marcaRodape">IF</span><span>.</span></a>
+    <p>Feito com curiosidade e um pouco de magia. ✦</p>
+    <span>© <span id="year"></span> <span id="nomeRodape">INGRIT FRANÇA</span></span>
+  </footer>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
